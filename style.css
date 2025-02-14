@@ -1,0 +1,218 @@
+*{
+    padding: 0%;
+    margin: 0%;
+    box-sizing: border-box;
+
+}
+body{
+    /* background-color: blue; */
+    /* background-image: url("https://img.freepik.com/free-photo/abstract-gradient-neon-lights_23-2149279139.jpg?semt=ais_hybrid"); */
+    /* background-position:; */
+ 
+}
+h1{
+    padding-left: 10px;
+}
+.main-div{
+    /* position: relative; */
+    /* bottom: 40px; */
+    box-sizing: border-box;
+    padding-bottom: 6px;
+    border-bottom: 1px solid #6d2ce8;
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+}
+.main-div>div>img{
+    border-radius:80% ;
+    border: 2px solid #6d2ce8;
+
+}
+
+.main-div>div>button{
+    border-radius: 10px;
+    padding: 7px 10px;
+    text-transform: capitalize;
+    border: 2px solid #6d2ce8;
+    color: #6d2ce8;
+    font-size: 15px;
+    font-weight: bold;
+
+
+}
+.main-div>div>button>a{
+    /* border-radius: 10px; */
+    /* padding: 7px 10px; */
+    text-transform: capitalize;
+    text-decoration: none;
+ 
+    color: #6d2ce8;
+    
+
+}
+.main-div>div>h1{
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    color: #6d2ce8;
+    /* font-size: ; */
+    text-transform: capitalize;
+
+}
+.sub-div>h4{
+    margin: 0px 5px;
+    font-size: 20px;
+    text-transform: capitalize;
+    color: #6d2ce8;
+
+}
+.sub-div{
+
+
+    display: flex;
+    /* width: 100%; */
+    justify-content: space-between;
+    gap: 14px;
+    margin: 0px 10px;
+    align-items: center;
+}
+.main{
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+.main>div{
+    border-radius:10px ;
+    position: relative;
+    top: 60px;
+    opacity: 0.9;
+    border: 2px solid #6d2ce8;
+    width: 430px;
+    height: 390px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* background: white; */
+}
+.main>div>div>h1{
+    color: #6d2ce8;
+    /* top: 10px; */
+    margin-top: 10px;
+    position: relative;
+    bottom: 20px;
+    text-transform: capitalize;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+
+}
+.main>div>div>input{
+    background-color: transparent;
+    color: blueviolet;
+    margin: 7px 0px;
+    padding: 7px 16px ;
+    font-size: 15px;
+    /* text-transform: capitalize; */
+    border: 2px solid #6d2ce8;
+    border-radius: 15px;
+}
+.main>div>div>button{
+    background-color: transparent;
+    color: #6d2ce8;
+    padding: 8px 5px ;
+    font-size: 15px;
+    font-weight: bold;
+    border: 2px solid #6d2ce8;
+    border-radius: 10px;
+    text-transform: capitalize;
+}
+.main>div>div>a{
+    margin-top: 10px;
+
+    text-transform: capitalize;
+    color: #c50e9e;
+    margin-left: 10px;
+}
+#sub{
+    margin-top: 10px;
+}
+.hello{
+    display: flex;
+    box-sizing: border-box;
+    margin: 20px ;
+    padding: 20px ;
+    border: 2px solid #6d2ce8;
+    height: 300px
+}
+.hello>div>div{
+    display: flex;
+}
+
+.card-sub>p{
+    text-transform: capitalize;
+    color: #6d2ce8;
+    font-size: 19px;
+    letter-spacing: 1px;
+    word-spacing: 1px;
+}
+
+.card-sub>img{
+    border: 2px solid #6d2ce8;
+    padding: 4px;
+    box-sizing:border-box;
+    width:420px ;
+    height: 210px;
+
+}
+@media only screen and (max-width: 420px) {
+    .main>div{
+        border-radius:10px ;
+        position: relative;
+        top: 90px;
+        opacity: 0.9;
+        border: 2px solid #6d2ce8;
+        width: 350px;
+        height: 330px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        /* background: white; */
+    } 
+    .main>div>div>h1{
+        color: #6d2ce8;
+        /* top: 10px; */
+        margin-top: 10px;
+        position: relative;
+        bottom: 5px;
+        text-transform: capitalize;
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    
+    }
+    .main>div>div>input{
+        background-color: transparent;
+        color: blueviolet;
+        margin: 4px 0px;
+        padding: 5px 13px ;
+        font-size: 13px;
+        /* text-transform: capitalize; */
+        border: 2px solid #6d2ce8;
+        border-radius: 11px;
+    }
+    .main>div>div>button{
+        background-color: #6d2ce8;
+        color:white;
+        padding: 5px 5px ;
+        font-size: 13px;
+        font-weight: bold;
+        border: 2px solid #6d2ce8;
+        border-radius: 10px;
+        text-transform: capitalize;
+    }
+    .main>div>div>a{
+        margin-top: 10px;
+    
+        text-transform: capitalize;
+        color: #6d2ce8;
+        margin-left: 20px;
+    }
+    
+  }
