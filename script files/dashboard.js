@@ -1,8 +1,8 @@
-import {  collection, addDoc, Timestamp, getDocs, where,query, orderBy, doc, deleteDoc, updateDoc } from "https://www.gstatic.com/firebasejs/11.1.0/firebase-firestore.js";
-import { onAuthStateChanged } from "https://www.gstatic.com/firebasejs/11.1.0/firebase-auth.js";
+import {  collection, addDoc, Timestamp, getDocs, where,query, orderBy, doc, deleteDoc, updateDoc, } from "https://www.gstatic.com/firebasejs/11.1.0/firebase-firestore.js";
+import { onAuthStateChanged,signOut } from "https://www.gstatic.com/firebasejs/11.1.0/firebase-auth.js";
 import { auth ,db} from "./config.js";
 
-
+let btn=document.querySelector("#logout")
 
 let profileImage=null
 
@@ -43,6 +43,18 @@ let myWidget = cloudinary.createUploadWidget({
 )
 
 
+
+
+btn.addEventListener("click",()=>{
+    // event.preventDefault();
+    signOut(auth).then(() => {
+        // Sign-out successful.
+        window.location='login.html'
+
+      }).catch((error) => {
+        // An error happened.
+      });
+})
 
 
 
