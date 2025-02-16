@@ -68,3 +68,55 @@ querySnapshot.forEach((doc) => {
 return user
 
 }
+
+
+
+
+
+
+
+
+
+
+let div=document.querySelector("#main-card")
+
+
+let store=[]
+async function blogsdata() {
+  const querySnapshot = await getDocs(collection(db, "blogs"));
+querySnapshot.forEach((doc) => {
+  // doc.data() is never undefined for query doc snapshots
+  console.log(doc.id, " => ", doc.data());
+  store.push(doc.data())
+
+});
+
+console.log(store)
+
+
+store.map((item=>{
+  div.innerHTML+= ` <div class="card">
+        <div class="divider">
+          <h2>name</h2>
+          <h3>${item.postdate}</h3>
+
+
+        </div>
+        <h2>${item.title}</h2>
+        <div class="card-div">
+          <p> ${item.description} </p>
+          <img src="${item.blogsimagege}" alt="" width="300px">
+
+        </div>
+
+      
+
+      </div>`
+
+}))
+
+
+
+
+}
+blogsdata()
