@@ -81,7 +81,8 @@ button.addEventListener("click",async(event)=>{
             blogsimagege: profileImage,
             description:description.value,
             uid: auth.currentUser.uid,
-            postdate: Timestamp.fromDate(new Date()),
+            postdate: new Date().toLocaleString(),
+
         });
         
         description.value = " ";
@@ -101,6 +102,8 @@ button.addEventListener("click",async(event)=>{
 
 })
 
+
+// console.log(postdate)
 
 
 
@@ -129,10 +132,13 @@ async function getdata() {
         
         div.innerHTML+=`  <div class="hello">
                 <div>
+                <div class="card-div">
                 <h1>${item.title}</h1>
+                <h4>${item.postdate}</h4>
+                </div>
                 <div class="card-sub">
                     <p>${item.description}</p>
-                    <img src="${item.blogsimagege}" alt="">
+                    <img src="${item.blogsimagege}" alt="post-image">
                 </div>
                 </div>
 
@@ -145,3 +151,12 @@ async function getdata() {
    
 }
 // getdata()
+
+
+
+
+
+
+
+
+
