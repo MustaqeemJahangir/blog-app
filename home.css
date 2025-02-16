@@ -1,0 +1,49 @@
+*{
+    padding: 0%;
+    margin: 0%;
+    box-sizing: border-box;
+
+}
+
+body{
+    background-color: aqua;
+    background-image:  url("images/fac.webp");
+    background-repeat: no-repeat;
+     /* background-position: ; */
+    background-size: cover; 
+}
+nav{
+    padding: 10px 30px ;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    height: 70px;
+}
+
+
+.sub-div{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 30px;
+}
+.menu-icon{
+    display: none;
+}
+
+
+@media only screen and (max-width: 430px) {
+    .sub-div{
+        gap: 10px;
+        flex-direction: column;
+        position: absolute;
+        top: 70px;
+        left: 0px;
+        right: 0px;
+        overflow: hidden;
+    }
+    .menu-icon{
+        display: block;
+    }
+}

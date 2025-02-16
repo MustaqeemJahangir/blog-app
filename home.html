@@ -4,31 +4,46 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="home.css">
 </head>
 <body>
     
+ 
+      <nav>
+        
+          <div>
+              <h1>navbar </h1>
+          </div>
+          
+          <div class="sub-div" id="menu">
+              <button><a href="./dashboard.html">dashboard</a></button>
+              <img id="img-name" src="id-logo.jpg" alt="" width="40px">
+              <h4 id="username">muhammad mustaqem</h4>
+              <button id="logout">logout</button>
+          </div>
+       
+       <div class="menu-icon" >
+<svg width="30px"  onclick="sum()" xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 448 512"><!--!Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.--><path fill="#ffffff" d="M0 96C0 78.3 14.3 64 32 64l384 0c17.7 0 32 14.3 32 32s-14.3 32-32 32L32 128C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32l384 0c17.7 0 32 14.3 32 32s-14.3 32-32 32L32 288c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32L32 448c-17.7 0-32-14.3-32-32s14.3-32 32-32l384 0c17.7 0 32 14.3 32 32z"/></svg>
+       </div>
+      </nav>
 
-    <!-- <h1>hello world</h1> -->
-     <div class="main-div" >
-        <div>
-            <h1>navbar </h1>
-        </div>
-        <div class="sub-div">
-            <button><a href="./dashboard.html">dashboard</a></button>
-            <img id="img-name" src="id-logo.jpg" alt="" width="40px">
-            <h4 id="username">muhammad mustaqem</h4>
-            <button id="logout">logout</button>
-        </div>
-     </div>
-     <div class="body-image">
-
-     </div>
-
+   
 
     
-
-
     <script type="module" src="./script files/app.js"></script>
+    <script>
+      let menulist=document.querySelector("#menu")
+      menulist.style.maxHeight='0px'
+      function sum() {
+        console.log('hello world')
+        if(    menulist.style.maxHeight=='0px'){
+              menulist.style.maxHeight='300px'
+
+        }
+        else{
+              menulist.style.maxHeight='0px'
+        }
+      }
+    </script>
 </body>
 </html>

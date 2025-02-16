@@ -48,8 +48,7 @@ onAuthStateChanged(auth, async(user) => {
         // An error happened.
       });
 })
-
-
+  
 
 async function getdat() {
 
