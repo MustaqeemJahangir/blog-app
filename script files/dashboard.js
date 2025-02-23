@@ -113,7 +113,7 @@ let allTodo=[]
 
 async function getdata() {
     allTodo.length=0
-    div.innerHTML= " "
+    
     const q = query(collection(db, "blogs"), where("uid", "==",auth.currentUser.uid));
   
     const querySnapshot = await getDocs(q);
@@ -124,19 +124,48 @@ async function getdata() {
     });
 
 
-    console.log(allTodo)
+    let username = "unknown";
+    let idImage;
+    const usersRef = collection(db, "user");
+    const qe = query(usersRef, where("uid", "==", auth.currentUser.uid));
+    const Snapshot = await getDocs(qe);
+    Snapshot.forEach((doc) => {
+      username = doc.data().fullname;
+      idImage = doc.data().image;
+      console.log(doc.data().fullname)
+    });
+  
 
+
+
+
+
+
+    div.innerHTML= " "
 
 
     allTodo.map((item)=>{
         
         div.innerHTML+=`  <div class="hello">
                 <div>
+
+                 <div class="card-diver" >
+               
+              <div id="id">
+                <img src="${idImage}" alt="post-image" width="40px">
+                 <h1>  ${username}</h1>
+              </div>
+                 <div>
+                 <h4>${item.postdate}</h4>
+                 </div>
+               </div>
                 <div class="card-div">
                 <h1>${item.title}</h1>
-                <h4>${item.postdate}</h4>
                 </div>
+                
+              
                 <div class="card-sub">
+                
                     <p>${item.description}</p>
                     <img src="${item.blogsimagege}" alt="post-image">
                 </div>

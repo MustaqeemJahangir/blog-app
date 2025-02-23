@@ -90,19 +90,22 @@ querySnapshot.forEach((doc) => {
   store.push(doc.data())
 
 });
+ 
+
+
+
+
 
 console.log(store)
 
 
 store.map((item=>{
   div.innerHTML+= ` <div class="card">
-        <div class="divider">
-          <h2>name</h2>
-          <h3>${item.postdate}</h3>
-
-
-        </div>
+        
+       <div class="post">
         <h2>${item.title}</h2>
+        <h4>${item.postdate}<h4>
+       </div>
         <div class="card-div">
           <p> ${item.description} </p>
           <img src="${item.blogsimagege}" alt="" width="300px">
